@@ -1,3 +1,4 @@
+
 window.addEventListener("load", function(event) {
   const submitEmailBtn = document.getElementById("js_submitEmail");
   submitEmailBtn.onclick = function() {
@@ -5,16 +6,17 @@ window.addEventListener("load", function(event) {
 
     // TODO: Save to Firebase DB, send to Node backend where we will send to
     // Campaign Monitor.
-    console.log(email);
 
-    fetch("/sumbit-email", {
-      method: "post",
-      body: JSON.stringify({ email: email }),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      }
-    });
+      $.ajax({
+        method: "POST",
+        url: "/sumbit-email",
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        data: JSON.stringify({ email: email })
+      }).done(function(msg) {
+        console.log("done");
+      });
+
 
     // TODO: Set Cookie, or Data Attribue with submitt email, so
     // we can reference when submitting the poll.
@@ -41,18 +43,15 @@ window.addEventListener("load", function(event) {
     const shaper = document.querySelector('input[name = "shaper"]:checked')
       .value;
 
-    // Save to Firebase DB
-    // Are we going to submit to a polling result place?
-    fetch("/sumbit-survey", {
-      method: "post",
-      body: JSON.stringify({ email: email, shaper: shaper }),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      }
+    $.ajax({
+      method: "POST",
+      url: "/sumbit-survey",
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      data: JSON.stringify({ email: email, shaper: shaper })
+    }).done(function(msg) {
+      console.log("done");
     });
-
-
 
     // TODO: Show Success
 
