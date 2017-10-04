@@ -12,6 +12,8 @@
   <link href="static/css/style.css" type="text/css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=PT+Serif|Roboto:500,700" rel="stylesheet">
   <script src="https://use.fontawesome.com/9aa665cf7f.js"></script>
+  <meta property="og:image" content="https://stab-in-the-dark-2017.herokuapp.com/static/img/boards.JPG"/>
+
   </head>
   <body>
 
@@ -209,9 +211,12 @@
       </div>
 
       <div class="social-links">
-        <button class="facebook"> <img src="/static/img/facebook.png" /> <span>Share</span> </button>
-        <button class="twitter"> <img src="/static/img/twitter.png" /> <span>Tweet</span> </button>
-        <button class="mail"> <img src="/static/img/mail.png" /> <span>Email</span> </button>
+        <button class="js-share-fb facebook"> <img src="/static/img/facebook.png" /> <span>Share</span> </button>
+        <button class="js-tweet twitter"> <img src="/static/img/twitter.png" /> <span>Tweet</span> </button>
+        <button class="js-mail mail"> <img src="/static/img/mail.png" /> <span>Email</span> </button>
+        <a id="lnkFacebook" target="_blank" href="https://www.facebook.com/sharer.php?u=https://stab-in-the-dark-2017.herokuapp.com/" class="d-none" ></a>
+        <a id="lnkTwitter" target="_blank" href="https://twitter.com/share?url=https://stab-in-the-dark-2017.herokuapp.com/;text=Stab%20in%20the%20dark;hashtags=stabinthedark"  class="d-none"></a>
+        <a id="lnkEmail" target="_blank" href="mailto:?Subject=Stab%20in%20the%20Dark%20Contest&Body=Check%20it%20out:%20https://stab-in-the-dark-2017.herokuapp.com/"  class="d-none"></a>
       </div>
 
     </section>

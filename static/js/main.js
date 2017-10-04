@@ -62,4 +62,18 @@ window.addEventListener("load", function(event) {
       .getElementsByClassName("js_section_three")[0]
       .classList.remove("d-none");
   };
+
+
+  document.getElementsByClassName("js-mail")[0].onclick = function(){
+    document.getElementById("lnkEmail").click();
+  }
+
+  document.getElementsByClassName("js-tweet")[0].onclick = function(){
+    document.getElementById("lnkTwitter").click();
+  }
+
+  document.getElementsByClassName("js-share-fb")[0].onclick = function(){
+    document.getElementById("lnkFacebook").click();
+  }
+
 });
