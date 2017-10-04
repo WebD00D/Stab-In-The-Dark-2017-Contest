@@ -51,10 +51,10 @@ a {
       margin-bottom: 28px; }
       @media (max-width: 922px) {
         .section__content__title {
-          font-size: 30px; } }
+          font-size: 24px; } }
     .section__content__copy {
       max-width: 85%;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 25px;
       font-family: "PT Serif", serif;
       margin-bottom: 18px; }
