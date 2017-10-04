@@ -119,9 +119,11 @@ $t-copy: 'PT Serif', serif;
         color: white;
         text-transform: uppercase;
         border: none;
+        transition: .2s ease;
 
         &:hover {
           cursor: pointer;
+          opacity: 0.8;
         }
 
         &:focus {

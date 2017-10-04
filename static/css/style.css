@@ -80,9 +80,11 @@ a {
       background-color: black;
       color: white;
       text-transform: uppercase;
-      border: none; }
+      border: none;
+      transition: .2s ease; }
       .section__content__input button:hover {
-        cursor: pointer; }
+        cursor: pointer;
+        opacity: 0.8; }
       .section__content__input button:focus {
         outline: none; }
   .section input[type="text"] ::-webkit-input-placeholder {
