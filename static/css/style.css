@@ -68,7 +68,8 @@ a {
       border-bottom: 2px solid #E6281F;
       font-size: 16px;
       font-weight: bold;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Roboto", sans-serif;
+      border-radius: 0px !important; }
       .section__content__input input:focus {
         outline: none; }
     .section__content__input button {

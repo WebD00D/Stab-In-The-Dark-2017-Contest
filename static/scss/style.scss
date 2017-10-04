@@ -96,6 +96,7 @@ $t-copy: 'PT Serif', serif;
     &__input {
 
       input {
+        -webkit-appearance: none
         border: none;
         height: 42px;
         width: 75%;
@@ -103,6 +104,7 @@ $t-copy: 'PT Serif', serif;
         font-size: 16px;
         font-weight: bold;
         font-family: $t-title;
+        border-radius: 0px !important;
 
         &:focus {
           outline: none;
