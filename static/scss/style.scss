@@ -208,14 +208,15 @@ $t-copy: 'PT Serif', serif;
 
     }
 
-
     &__filter {
       position: absolute;
       width: 100%;
       height: 100%;
       background-color: rgba(01,01,01,0.64);
 
-
+      &--light {
+        background-color: rgba(01,01,01,0.30);
+      }
 
     }
 

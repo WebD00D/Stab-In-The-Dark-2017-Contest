@@ -142,6 +142,8 @@ a {
       width: 100%;
       height: 100%;
       background-color: rgba(1, 1, 1, 0.64); }
+      .section__image__filter--light {
+        background-color: rgba(1, 1, 1, 0.3); }
     .section__image__watch {
       font-family: "Roboto", sans-serif;
       font-size: 14px;

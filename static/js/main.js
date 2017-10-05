@@ -1,6 +1,8 @@
 window.addEventListener("load", function(event) {
   const submitEmailBtn = document.getElementById("js_submitEmail");
   submitEmailBtn.onclick = function() {
+
+
     const email = document.getElementById("email").value;
     document.getElementById("errormessage").classList.add("d-none");
 
@@ -53,6 +55,9 @@ window.addEventListener("load", function(event) {
     document
       .getElementsByClassName("js_section_two")[0]
       .classList.remove("d-none");
+
+      document.getElementsByClassName("section__image__filter")[0]
+      .classList.remove("section__image__filter--light")
 
       document.getElementsByClassName("section__image")[0]
       .classList.remove("section__image--second");
@@ -220,6 +225,8 @@ window.addEventListener("load", function(event) {
       document.getElementsByClassName("section__image")[0]
       .classList.add("section__image--second");
 
+      document.getElementsByClassName("section__image__filter")[0]
+      .classList.add("section__image__filter--light")
 
 
     document
