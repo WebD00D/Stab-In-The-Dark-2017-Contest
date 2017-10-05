@@ -121,6 +121,12 @@ window.addEventListener("load", function(event) {
       .getElementsByClassName("js_section_one__southern")[0]
       .classList.add("d-none");
 
+      document.getElementsByClassName("section__image")[0]
+      .classList.remove("section__image--first");
+
+      document.getElementsByClassName("section__image")[0]
+      .classList.add("section__image--second--southern");
+
     document.getElementById("js_pplsaward").classList.add("d-none");
 
     document
@@ -189,6 +195,9 @@ window.addEventListener("load", function(event) {
 
     document.getElementsByClassName("section__image")[0]
     .classList.remove("section__image--second");
+
+    document.getElementsByClassName("section__image")[0]
+    .classList.remove("section__image--second--southern");
 
     document.getElementsByClassName("section__image")[0]
     .classList.add("section__image--third");

@@ -122,6 +122,11 @@ a {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center; }
+    .section__image--second--southern {
+      background-image: url("/static/img/jordy2.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
     .section__image--third {
       background-image: url("/static/img/jordy.jpg");
       background-size: cover;

@@ -187,6 +187,13 @@ $t-copy: 'PT Serif', serif;
       background-position: center;
     }
 
+    &--second--southern {
+      background-image: url('/static/img/jordy2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
     &--third {
       background-image: url('/static/img/jordy.jpg');
       background-size: cover;
