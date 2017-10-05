@@ -55,10 +55,10 @@ window.addEventListener("load", function(event) {
       .classList.remove("d-none");
 
       document.getElementsByClassName("section__image")[0]
-      .classList.remove("section__image--first");
+      .classList.remove("section__image--second");
 
       document.getElementsByClassName("section__image")[0]
-      .classList.add("section__image--second");
+      .classList.add("section__image--first");
 
 
   };
@@ -107,7 +107,6 @@ window.addEventListener("load", function(event) {
     });
 
     localStorage.setItem('stab_in_the_dark', true);
-
 
     document
       .getElementsByClassName("page")[0]
@@ -214,6 +213,15 @@ window.addEventListener("load", function(event) {
     document
       .getElementsByClassName("js_section_one")[0]
       .classList.remove("d-none");
+
+      document.getElementsByClassName("section__image")[0]
+      .classList.remove("section__image--first");
+
+      document.getElementsByClassName("section__image")[0]
+      .classList.add("section__image--second");
+
+
+
     document
       .getElementsByClassName("page")[0]
       .setAttribute("data-hemisphere", "Northern");
