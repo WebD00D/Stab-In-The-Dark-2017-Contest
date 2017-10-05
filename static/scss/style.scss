@@ -96,7 +96,7 @@ $t-copy: 'PT Serif', serif;
     &__input {
 
       input {
-        -webkit-appearance: none
+        -webkit-appearance: none;
         border: none;
         height: 42px;
         width: 75%;
@@ -241,6 +241,7 @@ $t-copy: 'PT Serif', serif;
   margin-bottom: 48px;
 }
 
+
 .m-l-48 {
   margin-left: 48px;
 
@@ -368,4 +369,9 @@ $t-copy: 'PT Serif', serif;
     height: 13px;
     width: 13px;
   }
+}
+
+.error-message {
+  color: #E6281F;
+  font-family: $t-copy;
 }

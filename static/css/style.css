@@ -62,6 +62,7 @@ a {
         .section__content__copy {
           max-width: 100%; } }
     .section__content__input input {
+      -webkit-appearance: none;
       border: none;
       height: 42px;
       width: 75%;
@@ -234,3 +235,7 @@ a {
   .social-links img {
     height: 13px;
     width: 13px; }
+
+.error-message {
+  color: #E6281F;
+  font-family: "PT Serif", serif; }

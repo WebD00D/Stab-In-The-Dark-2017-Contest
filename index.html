@@ -18,14 +18,36 @@
   <body>
 
 
-    <div class="page" data-email="">
+    <div class="page" data-hemisphere="" data-email="">
 
     <div class="section">
 
       <div class="section__content">
         <img class="section__content__logo section__content__logo--blk" src="/static/img/stabdarkblk@2x.png" />
 
-        <section class="js_section_one ">
+
+        <div class="js_section_hemisphere">
+          <div class="section__content__title">
+            12 Jordy-Tested boards. <br />
+            12 O'Neill wetsuits. <br />
+            12 Future fins.
+          </div>
+          <div class="section__content__copy">
+            We’re gifting one reader every board Jordy rode in
+            Stab in the Dark, plus 12 O’Neill wetsuits and
+            12 sets of Futures fins.
+          </div>
+          <div class="section__content__copy m-b-36">
+            But before you enter, we need to know where are you located.
+          </div>
+          <div class="section__content__input">
+            <button id="js_northernHemi" style="text-transform:none;margin-bottom:14px;">Northern Hemisphere</button>
+            <button id="js_southernHemi" style="text-transform:none">Southern Hemisphere</button>
+          </div>
+        </div>
+
+
+        <section class="js_section_one d-none">
           <div class="section__content__title">
             12 Jordy-Tested boards. <br />
             12 O'Neill wetsuits. <br />
@@ -45,8 +67,9 @@
           <div class="section__content__copy m-b-28">
             And, yes, we had the #44 fixed.
           </div>
-          <div class="section__content__input m-b-48">
-            <input id="email" type="text" placeholder="Enter email address here" />
+          <div class="section__content__input m-b-36">
+            <input id="email" class="m-b-12" type="text" placeholder="Enter email address here" />
+            <div id="errormessage" class="error-message d-none">Please enter a valid email.</div>
           </div>
           <div class="section__content__input">
             <button id="js_submitEmail">Continue</button>
@@ -56,7 +79,7 @@
       <section class="js_section_two d-none">
 
         <div class="section__content__title">
-          Winner takes all.
+          Winner takes all. jdjdg
         </div>
         <div class="section__content__copy">
           12 surfboards. <br />
