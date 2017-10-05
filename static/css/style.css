@@ -58,6 +58,12 @@ a {
       line-height: 25px;
       font-family: "PT Serif", serif;
       margin-bottom: 18px; }
+      .section__content__copy--sm {
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        color: #808080; }
+        .section__content__copy--sm a {
+          color: black; }
       @media (max-width: 922px) {
         .section__content__copy {
           max-width: 100%; } }
@@ -75,8 +81,8 @@ a {
         outline: none; }
     .section__content__input button {
       height: 48px;
-      font-size: 18px;
-      width: 256px;
+      font-size: 14px;
+      width: 230px;
       font-family: "Roboto", sans-serif;
       letter-spacing: 0.5px;
       background-color: black;
@@ -103,13 +109,24 @@ a {
     color: black !important; }
   .section__image {
     height: 100vh;
-    min-height: 800px;
+    min-height: 900px;
     width: 50%;
-    background-image: url("/static/img/boards.JPG");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative; }
+    .section__image--first {
+      background-image: url("/static/img/boards.JPG");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .section__image--second {
+      background-image: url("/static/img/wetsuites.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .section__image--third {
+      background-image: url("/static/img/jordy.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom; }
     @media (max-width: 922px) {
       .section__image {
         width: 100%;
@@ -140,11 +157,22 @@ a {
   .fx-col-m {
     flex-direction: column; } }
 
+@media (max-width: 600px) {
+  .t-center-sm {
+    text-align: center; } }
+
+@media (min-width: 401px) {
+  .m-r-10-lg {
+    margin-right: 10px; } }
+
 .d-none {
   display: none; }
 
 .m-b-12 {
   margin-bottom: 12px; }
+
+.m-b-22 {
+  margin-bottom: 22px; }
 
 .m-b-28 {
   margin-bottom: 28px; }

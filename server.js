@@ -24,16 +24,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-//Force https in production
-// if (process.env.NODE_ENV === "production") {
-//   app.use(function(req, res, next) {
-//     if (req.headers["x-forwarded-proto"] !== "https") {
-//       return res.redirect(["https://", req.get("Host"), req.url].join(""));
-//     }
-//     return next();
-//   });
-// }
-
 app.use("/static/css", express.static(__dirname + "/static/css"));
 app.use("/static/scss", express.static(__dirname + "/static/scss"));
 app.use("/static/js", express.static(__dirname + "/static/js"));
@@ -43,14 +33,12 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-// app.post('*' (res, req) => {
-//   console.log('body: ', req.body)
-//   console.log('query: ', req.query)
-// })
 
 // LOGIC
 app.post("/sumbit-email", function(request, res) {
   var email = request.body.email;
+  var social = request.body.social;
+  var hemisphere = request.body.hemisphere;
 
   var timeStamp = Date.now();
 
@@ -70,7 +58,9 @@ app.post("/sumbit-email", function(request, res) {
     .database()
     .ref("readers/" + timeStamp)
     .set({
-      email: email
+      email: email,
+      social: social,
+      hemisphere: hemisphere
     });
 
   res.end("successful");
@@ -79,17 +69,57 @@ app.post("/sumbit-email", function(request, res) {
 app.post("/sumbit-survey", function(request, res) {
   var email = request.body.email;
   var shaper = request.body.shaper;
-
+  var hemisphere = request.body.hemisphere;
+  var social = request.body.social;
   var timeStamp = Date.now();
 
-  firebase
-    .database()
-    .ref("responses/" + shaper + "/" + timeStamp)
-    .set({
-      email: email
-    });
+  if ( hemisphere === "Northern") {
+    firebase
+      .database()
+      .ref("responses/" + shaper + "/" + timeStamp)
+      .set({
+        email: email,
+        social: social
+      });
+  } else {
+    firebase
+      .database()
+      .ref("southern-hemisphere-responses/" + shaper + "/" + timeStamp)
+      .set({
+        email: email,
+        social: social
+      });
+  }
 
+  res.end("successful");
+});
 
+app.post("/shared-list", function(request, res) {
+  var email = request.body.email;
+  var hemisphere = request.body.hemisphere;
+  var social = request.body.social;
+  var type = request.body.type;
+  var timeStamp = Date.now();
+
+  if ( hemisphere === "Northern") {
+    firebase
+      .database()
+      .ref("shared/" + timeStamp)
+      .set({
+        email: email,
+        social: social,
+        type: type,
+      });
+  } else {
+    firebase
+      .database()
+      .ref("southern-shared/" + timeStamp)
+      .set({
+        email: email,
+        social: social,
+        type: type
+      });
+  }
 
   res.end("successful");
 });

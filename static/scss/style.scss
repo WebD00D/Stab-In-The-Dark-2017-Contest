@@ -88,6 +88,16 @@ $t-copy: 'PT Serif', serif;
       font-family: $t-copy;
       margin-bottom: 18px;
 
+      &--sm {
+        font-family: $t-title;
+        font-size: 13px;
+        color: #808080;
+
+        a {
+          color: black;
+        }
+      }
+
       @media ( max-width: 922px) {
          max-width: 100%;
       }
@@ -113,8 +123,8 @@ $t-copy: 'PT Serif', serif;
 
       button {
         height: 48px;
-        font-size: 18px;
-        width: 256px;
+        font-size: 14px;
+        width: 230px;
         font-family: $t-title;
         letter-spacing: 0.5px;
         background-color: black;
@@ -159,13 +169,30 @@ $t-copy: 'PT Serif', serif;
 
   &__image {
     height: 100vh;
-    min-height: 800px;
+    min-height: 900px;
     width: 50%;
-    background-image: url('/static/img/boards.JPG');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     position: relative;
+
+    &--first {
+      background-image: url('/static/img/boards.JPG');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--second {
+      background-image: url('/static/img/wetsuites.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--third {
+      background-image: url('/static/img/jordy.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
 
     @media ( max-width: 922px) {
      width: 100%;
@@ -220,6 +247,19 @@ $t-copy: 'PT Serif', serif;
   }
 }
 
+.t-center-sm {
+  @media ( max-width: 600px) {
+    text-align: center;
+  }
+}
+
+.m-r-10-lg {
+
+  @media ( min-width: 401px) {
+    margin-right: 10px;
+  }
+
+}
 
 .d-none {
   display: none;
@@ -227,6 +267,10 @@ $t-copy: 'PT Serif', serif;
 
 .m-b-12 {
   margin-bottom: 12px;
+}
+
+.m-b-22 {
+  margin-bottom: 22px;
 }
 
 .m-b-28 {
