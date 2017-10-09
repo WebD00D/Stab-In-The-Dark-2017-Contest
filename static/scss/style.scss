@@ -241,7 +241,6 @@ $t-copy: 'PT Serif', serif;
 }
 
 
-
 // FCSS
 
 .fx {
@@ -426,4 +425,12 @@ $t-copy: 'PT Serif', serif;
 .error-message {
   color: #E6281F;
   font-family: $t-copy;
+}
+
+
+.surfstich_logo {
+  height: 30px;
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
 }

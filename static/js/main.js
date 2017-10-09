@@ -1,4 +1,5 @@
 window.addEventListener("load", function(event) {
+
   const submitEmailBtn = document.getElementById("js_submitEmail");
   submitEmailBtn.onclick = function() {
 
@@ -244,7 +245,14 @@ window.addEventListener("load", function(event) {
     document
       .getElementsByClassName("page")[0]
       .setAttribute("data-hemisphere", "Southern");
+
+      // Show Surfstitch logo..
+      document.getElementsByClassName("surfstich_logo")[0].classList.remove("d-none");      
+
+
   };
+
+
 
   document.getElementsByClassName("js-mail")[0].onclick = function() {
     addToShareList("email");
