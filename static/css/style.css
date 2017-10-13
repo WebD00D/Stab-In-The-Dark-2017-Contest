@@ -280,3 +280,26 @@ a {
   position: absolute;
   bottom: 50px;
   right: 30px; }
+
+.btn {
+  text-align: center;
+  line-height: 48px;
+  display: block;
+  height: 48px;
+  font-size: 14px;
+  width: 230px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.5px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  transition: .2s ease;
+  margin-top: 28px; }
+  .btn i {
+    margin-right: 8px; }
+  .btn:hover {
+    cursor: pointer;
+    opacity: 0.8; }
+  .btn:focus {
+    outline: none; }
