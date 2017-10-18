@@ -32,8 +32,12 @@ a {
         padding: 0px;
         padding-top: 32px;
         padding-bottom: 32px; } }
+    .section__content__sponsors {
+      margin-top: 40px; }
+      .section__content__sponsors img {
+        height: 100px; }
     .section__content__logo {
-      height: 60px;
+      height: 30px;
       margin-bottom: 64px; }
       @media (max-width: 922px) {
         .section__content__logo--blk {

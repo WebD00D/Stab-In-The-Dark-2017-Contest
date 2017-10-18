@@ -47,8 +47,16 @@ $t-copy: 'PT Serif', serif;
      padding-bottom: 32px;
     }
 
+    &__sponsors {
+      margin-top: 40px;
+      
+      img  {
+        height: 100px;
+      }
+    }
+
     &__logo {
-      height: 60px;
+      height: 30px;
       margin-bottom: 64px;
 
       &--blk {

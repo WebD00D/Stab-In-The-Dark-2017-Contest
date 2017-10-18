@@ -7,7 +7,7 @@ window.addEventListener("load", function(event) {
     const email = document.getElementById("email").value;
     document.getElementById("errormessage").classList.add("d-none");
 
-    var has_submitted = localStorage.getItem("stab_in_the_dark");
+    var has_submitted = localStorage.getItem("stab_x_vonu");
     if ( has_submitted ) {
       document.getElementById("errormessage").innerHTML = "Looks like you've already entered to win."
       document.getElementById("errormessage").classList.remove("d-none");
@@ -40,7 +40,7 @@ window.addEventListener("load", function(event) {
       console.log("done");
     });
 
-    localStorage.setItem('stab_in_the_dark', true);
+    localStorage.setItem('stab_x_vonu', true);
 
     document
       .getElementsByClassName("page")[0]
@@ -112,7 +112,7 @@ window.addEventListener("load", function(event) {
       console.log("done");
     });
 
-    localStorage.setItem('stab_in_the_dark', true);
+    localStorage.setItem('stab_x_vonu', true);
 
     document
       .getElementsByClassName("page")[0]
@@ -212,45 +212,9 @@ window.addEventListener("load", function(event) {
       .classList.remove("d-none");
   };
 
-  document.getElementById("js_northernHemi").onclick = function() {
-    document
-      .getElementsByClassName("js_section_hemisphere")[0]
-      .classList.add("d-none");
-    document
-      .getElementsByClassName("js_section_one")[0]
-      .classList.remove("d-none");
-
-      document.getElementsByClassName("section__image")[0]
-      .classList.remove("section__image--first");
-
-      document.getElementsByClassName("section__image")[0]
-      .classList.add("section__image--second");
-
-      document.getElementsByClassName("section__image__filter")[0]
-      .classList.add("section__image__filter--light")
 
 
-    document
-      .getElementsByClassName("page")[0]
-      .setAttribute("data-hemisphere", "Northern");
-  };
 
-  document.getElementById("js_southernHemi").onclick = function() {
-    document
-      .getElementsByClassName("js_section_hemisphere")[0]
-      .classList.add("d-none");
-    document
-      .getElementsByClassName("js_section_one__southern")[0]
-      .classList.remove("d-none");
-    document
-      .getElementsByClassName("page")[0]
-      .setAttribute("data-hemisphere", "Southern");
-
-      // Show Surfstitch logo..
-      document.getElementsByClassName("surfstich_logo")[0].classList.remove("d-none");      
-
-
-  };
 
 
 
