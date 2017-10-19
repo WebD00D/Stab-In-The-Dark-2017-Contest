@@ -120,12 +120,12 @@ a {
     width: 50%;
     position: relative; }
     .section__image--first {
-      background-image: url("/static/img/Vonu_Surf.JPG");
+      background-image: url("/static/img/Vonu_Surf.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center; }
     .section__image--third {
-      background-image: url("/static/img/Vonu_Surf.JPG");
+      background-image: url("/static/img/Vonu_Surf.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: bottom; }
