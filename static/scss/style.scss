@@ -49,15 +49,20 @@ $t-copy: 'PT Serif', serif;
 
     &__sponsors {
       margin-top: 40px;
-      
+
       img  {
         height: 100px;
+
+        @media (max-width: 980px) {
+          height: 80px;
+        }
       }
     }
 
     &__logo {
       height: 30px;
       margin-bottom: 64px;
+
 
       &--blk {
         @media ( max-width: 922px) {
@@ -68,7 +73,8 @@ $t-copy: 'PT Serif', serif;
       &--wht {
 
         margin-top: 32px;
-        margin-left: 18px;
+      //  margin-left: 18px;
+        margin-left: 7.5%;
 
         @media ( min-width: 923px) {
          display: none;
@@ -182,28 +188,14 @@ $t-copy: 'PT Serif', serif;
     position: relative;
 
     &--first {
-      background-image: url('/static/img/boards.JPG');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &--second {
-      background-image: url('/static/img/wetsuites.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    &--second--southern {
-      background-image: url('/static/img/jordy2.jpg');
+      background-image: url('/static/img/Vonu_Surf.JPG');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
     }
 
     &--third {
-      background-image: url('/static/img/jordy.jpg');
+      background-image: url('/static/img/Vonu_Surf.JPG');
       background-size: cover;
       background-repeat: no-repeat;
       background-position: bottom;
@@ -216,14 +208,30 @@ $t-copy: 'PT Serif', serif;
 
     }
 
+    &--second {
+      background-image: url('/static/img/Vonu_Map.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media ( max-width: 922px) {
+      background-image: none;
+       width: 100%;
+       min-height: 0px;
+       height: 70px;
+
+      }
+
+    }
+
     &__filter {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: rgba(01,01,01,0.64);
+      //background-color: rgba(01,01,01,0.64);
 
       &--light {
-        background-color: rgba(01,01,01,0.30);
+      //  background-color: rgba(01,01,01,0.30);
       }
 
     }
@@ -278,6 +286,12 @@ $t-copy: 'PT Serif', serif;
 
 .d-none {
   display: none;
+}
+
+.d-none-dt {
+  @media (min-width: 923px) {
+    display: none;
+  }
 }
 
 .m-b-12 {

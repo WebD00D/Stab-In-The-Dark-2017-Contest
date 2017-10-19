@@ -36,6 +36,9 @@ a {
       margin-top: 40px; }
       .section__content__sponsors img {
         height: 100px; }
+        @media (max-width: 980px) {
+          .section__content__sponsors img {
+            height: 80px; } }
     .section__content__logo {
       height: 30px;
       margin-bottom: 64px; }
@@ -44,7 +47,7 @@ a {
           display: none; } }
       .section__content__logo--wht {
         margin-top: 32px;
-        margin-left: 18px; }
+        margin-left: 7.5%; }
         @media (min-width: 923px) {
           .section__content__logo--wht {
             display: none; } }
@@ -117,22 +120,12 @@ a {
     width: 50%;
     position: relative; }
     .section__image--first {
-      background-image: url("/static/img/boards.JPG");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .section__image--second {
-      background-image: url("/static/img/wetsuites.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center; }
-    .section__image--second--southern {
-      background-image: url("/static/img/jordy2.jpg");
+      background-image: url("/static/img/Vonu_Surf.JPG");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center; }
     .section__image--third {
-      background-image: url("/static/img/jordy.jpg");
+      background-image: url("/static/img/Vonu_Surf.JPG");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: bottom; }
@@ -141,13 +134,21 @@ a {
         width: 100%;
         min-height: 320px;
         height: 320px; } }
+    .section__image--second {
+      background-image: url("/static/img/Vonu_Map.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+      @media (max-width: 922px) {
+        .section__image--second {
+          background-image: none;
+          width: 100%;
+          min-height: 0px;
+          height: 70px; } }
     .section__image__filter {
       position: absolute;
       width: 100%;
-      height: 100%;
-      background-color: rgba(1, 1, 1, 0.64); }
-      .section__image__filter--light {
-        background-color: rgba(1, 1, 1, 0.3); }
+      height: 100%; }
     .section__image__watch {
       font-family: "Roboto", sans-serif;
       font-size: 14px;
@@ -178,6 +179,10 @@ a {
 
 .d-none {
   display: none; }
+
+@media (min-width: 923px) {
+  .d-none-dt {
+    display: none; } }
 
 .m-b-12 {
   margin-bottom: 12px; }

@@ -26,21 +26,18 @@ window.addEventListener("load", function(event) {
       return;
     }
 
-    const hemisphere = document
-      .getElementsByClassName("page")[0]
-      .getAttribute("data-hemisphere");
 
     $.ajax({
       method: "POST",
       url: "/sumbit-email",
       contentType: "application/json; charset=utf-8",
       dataType: "json",
-      data: JSON.stringify({ email: email, social: social, hemisphere: hemisphere })
+      data: JSON.stringify({ email: email, social: social })
     }).done(function(msg) {
       console.log("done");
     });
 
-    localStorage.setItem('stab_x_vonu', true);
+  //  localStorage.setItem('stab_x_vonu', true);
 
     document
       .getElementsByClassName("page")[0]
@@ -61,86 +58,13 @@ window.addEventListener("load", function(event) {
       .classList.remove("section__image__filter--light")
 
       document.getElementsByClassName("section__image")[0]
-      .classList.remove("section__image--second");
-
-      document.getElementsByClassName("section__image")[0]
-      .classList.add("section__image--first");
-
-
-  };
-
-  const submitSouthernEmailBtn = document.getElementById(
-    "js_submitEmail__southern"
-  );
-  submitSouthernEmailBtn.onclick = function() {
-    const email = document.getElementById("email__southern").value;
-    document.getElementById("errormessage__southern").classList.add("d-none");
-
-    var has_submitted = localStorage.getItem("stab_in_the_dark");
-    if ( has_submitted ) {
-      document.getElementById("errormessage__southern").innerHTML = "Looks like you've already entered to win."
-      document.getElementById("errormessage__southern").classList.remove("d-none");
-      return;
-    }
-
-    const social = document.getElementById("social__southern").value
-
-    if (!validateEmail(email)) {
-      document
-        .getElementById("errormessage__southern")
-        .classList.remove("d-none");
-      return;
-    }
-
-    if ( !social || 0 === social.length ) {
-      document.getElementById("errormessage__southern").innerHTML = "Please enter a valid social media handle."
-      document.getElementById("errormessage__southern").classList.remove("d-none");
-      return;
-    }
-
-    const hemisphere = document
-      .getElementsByClassName("page")[0]
-      .getAttribute("data-hemisphere");
-
-    $.ajax({
-      method: "POST",
-      url: "/sumbit-email",
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      data: JSON.stringify({ email: email, social: social, hemisphere: hemisphere })
-    }).done(function(msg) {
-      console.log("done");
-    });
-
-    localStorage.setItem('stab_x_vonu', true);
-
-    document
-      .getElementsByClassName("page")[0]
-      .setAttribute("data-email", email);
-
-      document
-        .getElementsByClassName("page")[0]
-        .setAttribute("data-social", social);
-
-    document
-      .getElementsByClassName("js_section_one__southern")[0]
-      .classList.add("d-none");
-
-      document.getElementsByClassName("section__image")[0]
       .classList.remove("section__image--first");
 
       document.getElementsByClassName("section__image")[0]
-      .classList.add("section__image--second--southern");
-
-    document.getElementById("js_pplsaward").classList.add("d-none");
-
-    document
-      .getElementsByClassName("js_section_two")[0]
-      .classList.remove("d-none");
+      .classList.add("section__image--second");
 
 
   };
-
 
 
   function validateEmail(email) {
@@ -155,19 +79,15 @@ window.addEventListener("load", function(event) {
       .getElementsByClassName("page")[0]
       .getAttribute("data-email");
 
-      if ( !document.querySelector('input[name = "shaper"]:checked') ) {
+      if ( !document.querySelector('input[name = "island"]:checked') ) {
         document
           .getElementById("errormessage__shaper")
           .classList.remove("d-none");
         return;
       }
 
-    const shaper = document.querySelector('input[name = "shaper"]:checked')
-      .value;
+    const island = document.querySelector('input[name = "island"]:checked').value;
 
-    const hemisphere = document
-      .getElementsByClassName("page")[0]
-      .getAttribute("data-hemisphere")
 
     const social = document
         .getElementsByClassName("page")[0]
@@ -178,34 +98,22 @@ window.addEventListener("load", function(event) {
       url: "/sumbit-survey",
       contentType: "application/json; charset=utf-8",
       dataType: "json",
-      data: JSON.stringify({ email: email, social: social, shaper: shaper, hemisphere: hemisphere  })
+      data: JSON.stringify({ email: email, social: social, island: island })
     }).done(function(msg) {
       console.log("done");
     });
 
     // TODO: Show Success
 
-    document
-      .getElementsByClassName("js_section_two")[0]
-      .classList.add("d-none");
-    if (
-      document
-        .getElementsByClassName("page")[0]
-        .getAttribute("data-hemisphere") === "Southern"
-    ) {
-
-      document.getElementById("js_thankscopy").innerHTML = "We can’t wait to give 12 surfboards crafted by the world’s best shapers to one person.";
-    }
-
-
     document.getElementsByClassName("section__image")[0]
     .classList.remove("section__image--second");
 
     document.getElementsByClassName("section__image")[0]
-    .classList.remove("section__image--second--southern");
-
-    document.getElementsByClassName("section__image")[0]
     .classList.add("section__image--third");
+
+    document
+      .getElementsByClassName("js_section_two")[0]
+      .classList.add("d-none");
 
     document
       .getElementsByClassName("js_section_three")[0]
@@ -240,10 +148,6 @@ window.addEventListener("load", function(event) {
       .getElementsByClassName("page")[0]
       .getAttribute("data-email");
 
-    const hemisphere = document
-      .getElementsByClassName("page")[0]
-      .getAttribute("data-hemisphere")
-
     const social = document
         .getElementsByClassName("page")[0]
         .getAttribute("data-social");
@@ -253,7 +157,7 @@ window.addEventListener("load", function(event) {
       url: "/shared-list",
       contentType: "application/json; charset=utf-8",
       dataType: "json",
-      data: JSON.stringify({ email: email, social: social, hemisphere: hemisphere, type: type  })
+      data: JSON.stringify({ email: email, social: social, type: type  })
     }).done(function(msg) {
       console.log("done");
     });
