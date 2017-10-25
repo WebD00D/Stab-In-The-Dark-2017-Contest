@@ -79,6 +79,8 @@ window.addEventListener("load", function(event) {
   const submitEntry = document.getElementById("js_submitEntry");
   submitEntry.onclick = function() {
 
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+
     const email = document
       .getElementsByClassName("page")[0]
       .getAttribute("data-email");
