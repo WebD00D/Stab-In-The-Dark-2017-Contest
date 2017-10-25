@@ -236,6 +236,7 @@ $t-copy: 'PT Serif', serif;
     }
 
     &--third {
+      min-height: 900px;
       background-image: url('/static/img/Vonu_Surf.jpg');
       background-size: cover;
       background-repeat: no-repeat;

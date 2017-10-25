@@ -154,6 +154,7 @@ a {
       background-repeat: no-repeat;
       background-position: center; }
     .section__image--third {
+      min-height: 900px;
       background-image: url("/static/img/Vonu_Surf.jpg");
       background-size: cover;
       background-repeat: no-repeat;
