@@ -59,6 +59,15 @@ a {
       @media (max-width: 922px) {
         .section__content__title {
           font-size: 24px; } }
+    .section__content__subtitle {
+      margin-bottom: 20px;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px; }
+    .section__content__break {
+      height: 2px;
+      width: 40px;
+      background-color: #E6281F;
+      margin-bottom: 30px; }
     .section__content__copy {
       max-width: 85%;
       font-size: 16px;
@@ -116,7 +125,7 @@ a {
     color: black !important; }
   .section__image {
     height: 100vh;
-    min-height: 900px;
+    min-height: 1100px;
     width: 50%;
     position: relative; }
     .section__image--first {

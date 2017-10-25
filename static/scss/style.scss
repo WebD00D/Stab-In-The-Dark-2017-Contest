@@ -95,6 +95,19 @@ $t-copy: 'PT Serif', serif;
 
     }
 
+    &__subtitle {
+      margin-bottom: 20px;
+      font-family: $t-title;
+      font-size: 14px;
+    }
+
+    &__break {
+      height: 2px;
+      width: 40px;
+      background-color: #E6281F;
+      margin-bottom: 30px;
+    }
+
     &__copy {
       max-width: 85%;
       font-size: 16px;
@@ -183,7 +196,7 @@ $t-copy: 'PT Serif', serif;
 
   &__image {
     height: 100vh;
-    min-height: 900px;
+    min-height: 1100px;
     width: 50%;
     position: relative;
 
