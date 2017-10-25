@@ -9,6 +9,10 @@ body, html {
 a {
   text-decoration: none; }
 
+@media (min-width: 992px) {
+  .mobile-only {
+    display: none; } }
+
 .section {
   max-width: 1448px;
   width: 100%;

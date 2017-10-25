@@ -11,7 +11,11 @@ a {
   text-decoration: none;
 }
 
-
+.mobile-only {
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
 
 $t-title: 'Roboto', sans-serif;
 $t-copy: 'PT Serif', serif;
