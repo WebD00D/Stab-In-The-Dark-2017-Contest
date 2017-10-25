@@ -148,6 +148,34 @@ $t-copy: 'PT Serif', serif;
         }
       }
 
+      a {
+        height: 48px;
+        line-height: 48px;
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        width: 230px;
+        font-family: $t-title;
+        letter-spacing: 0.5px;
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        border: none;
+        transition: .2s ease;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+      }
+
       button {
         height: 48px;
         font-size: 14px;
@@ -226,6 +254,7 @@ $t-copy: 'PT Serif', serif;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+      min-height: 900px;
 
       @media ( max-width: 922px) {
       background-image: none;

@@ -95,6 +95,26 @@ a {
       border-radius: 0px !important; }
       .section__content__input input:focus {
         outline: none; }
+    .section__content__input a {
+      height: 48px;
+      line-height: 48px;
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      width: 230px;
+      font-family: "Roboto", sans-serif;
+      letter-spacing: 0.5px;
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      transition: .2s ease; }
+      .section__content__input a:hover {
+        cursor: pointer;
+        opacity: 0.8; }
+      .section__content__input a:focus {
+        outline: none; }
     .section__content__input button {
       height: 48px;
       font-size: 14px;
@@ -147,7 +167,8 @@ a {
       background-image: url("/static/img/Vonu_Map.jpg");
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: center; }
+      background-position: center;
+      min-height: 900px; }
       @media (max-width: 922px) {
         .section__image--second {
           background-image: none;

@@ -4,6 +4,8 @@ window.addEventListener("load", function(event) {
   submitEmailBtn.onclick = function() {
 
 
+   $("html, body").animate({ scrollTop: 0 }, "slow");
+
     const email = document.getElementById("email").value;
     document.getElementById("errormessage").classList.add("d-none");
 
@@ -62,6 +64,8 @@ window.addEventListener("load", function(event) {
 
       document.getElementsByClassName("section__image")[0]
       .classList.add("section__image--second");
+
+
 
 
   };
